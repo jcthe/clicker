@@ -3,14 +3,10 @@ const readLine=require ('readline-sync');
 
 readLine.question('Hi their today i will be showing you a program that acts like a magic eight ball');
 
-readLine.question('do you understan yes or no');
+readLine.question('do you understand yes or no');
 
 
-
-
-
-
-
+readLine.question('Did you have fun yes or no');
 
 let randomNum = Math.floor (Math.random()*answerList.length);
 console.log(randomNum);
