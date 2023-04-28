@@ -3,7 +3,7 @@ const readLine = require('readline-sync');
 
 let sandwich = readLine.question("What type of sandwich would you like(chicken, beef, or tofu):");
 
-let sandwhichCost = readLine.question("that would be $5.25");
+
 
 let sandwichCost = {
     chicken: 5.25,
@@ -15,30 +15,27 @@ let sandwichCost = {
 
 
 
-let beverage = readLine.question("would like a drink with that");
+let beverage = readLine.question("Would you like a beverage with that:");
 
-let drink = readLine.question("What size of a drink would you like");
-
-let drinkCost = console.log("That will be $1.00");
+let beverageSize = readLine.question("What size would you like small:$1.00, medium: 1.75, large:2,25:");
 
 
-
-console.log("so far your total is $6.28");
+console.log("Your total so far is 6.25 ");
 
 
 
-
-let frenchfries = readLine.question("Would you like some fries with that");
-
-let frenchfriesCost =readLine.question("Small is $1.00, medium is 1.50, large is 2.00, [so which size would you like");
-console.log(" Your total cost is $7.28");
-
-
-
-
-myOrder={
-    chicken:5.25,
+let beverageCost ={
     small: 1.00,
-    small: 1.00,
-    totalCost: 7.28,
+    medium: 1.75,
+    large: 2.25,
 };
+
+
+
+
+let frenchfries  = readLine.question("Would you like fires  with that too:");
+let frenchfriesSize= readLineine.question("WHat size of fries would you like");
+
+
+
+
