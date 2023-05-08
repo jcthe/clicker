@@ -1,15 +1,10 @@
-let answerList =['yes' , 'no' , 'maybe' , 'for sure', 'idk' , 'what?' , 'dont ask me' ];
-const readLine=require ('readline-sync');
+const readLine = require('readline-sync');
 
-readLine.question('Hi their today i will be showing you a program that acts like a magic eight ball');
-
-readLine.question('do you understand yes or no');
+let sandwich = readLine.question("What type of sandwich would you like(chicken, beef, or tofu):");
 
 
-readLine.question('Did you have fun yes or no');
 
-let randomNum = Math.floor (Math.random()*answerList.length);
-console.log(randomNum);
-let randomAnswer = answerList[randomNum];
-console.log(randomAnswer);
+
+
+
 

@@ -33,8 +33,8 @@ let beverageCost ={
 
 
 
-let frenchfries  = readLine.question("Would you like fires  with that too:");
-let frenchfriesSize= readLineine.question("WHat size of fries would you like");
+let frenchfries  = readLine.question("Would you like fires  with that too  small: $1,00 medium: $1.50 large: $2,00:");
+
 
 
 
