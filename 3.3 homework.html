@@ -8,7 +8,7 @@
 <body>
 <div class="container">
     <div class="content">
-        <h3> Is it a triangle???</h3>
+        <h3> Area of a rectangle???</h3>
         <div class="row">
             <div>
                 <label for="a">A</label>
@@ -36,7 +36,7 @@
     const ans = document.querySelector('p');
     const calculateButton = document.getElementById('calc');
     const clearButton = document.getElementById('clear');
-    function  (num1, num2, num3){
+    function checkIsTrie(num1, num2, num3){
         let sideAB = (num1 + num2) > num3;
         let sideAC = (num1 + num3) > num2;
         let sideBC = (num2 + num3) > num1;
@@ -75,7 +75,7 @@
 
 
 
-function checksIsValid(num){
+    function checksIsValid(num){
         if (isNaN(num)){
             return false
         }
@@ -83,9 +83,7 @@ function checksIsValid(num){
 
         }
         return true
-}
-
-
+    }
 
 
 
