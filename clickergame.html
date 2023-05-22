@@ -7,43 +7,38 @@
     <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-
 <div class="content">
     <div class="container">
-
-        <img class="cookie" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1fCwtm7K9K2f37gwPKIxZuVS0vrWwpAVFVQ&usqp=CAU">
+        <img class="monster" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1fCwtm7K9K2f37gwPKIxZuVS0vrWwpAVFVQ&usqp=CAU">
         <div class="row">
-            <button id="Click">Click</button>
-
-
+            <button id="Click">Click</button><h3>Shop</h3>
 
             <div class="row">
-                <button id="Shop">Shop</button>
             </div>
         </div>
     </div>
 </div>
-
-<div id="score"> </div>
+<div id="score">
+</div>
+<h1>Score</h1>
 
 <script>
     const content = document.querySelector('.content');
     const points = document.getElementById('score');
     const image = document.getElementById('image');
-    const shop = document.getElementById('shop');
     const button = document.getElementById('Click');
-
     let score=0;
-
     button.addEventListener('click', function (){
-
-
         score=score+1;
         points.innerHTML=score
     });
-    button.addEventListener('shop',function (){
-        shop.innerHTML=shop
-    });
+
+
+
+
+
+
+
 
 
 
