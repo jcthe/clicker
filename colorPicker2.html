@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title> <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <p>Lissim diam quis enim loborId ornare arcu odio ut sem nulla. Viverra tellus in hac habitasse platea. Arcu ac tortor dignissim convallis aenean et tortor at. Nisi vitae suscipit tellus mauris a diam maecenas sed. At tempor commodo ullamcorper a lacus vestibulum. Et netus et malesuada fames ac turpis egestas sed. In iaculis nunc sed augue lacus. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Quis risus sed vulputate odio ut enim blandit volutpat. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Elementum tempus egestas sed sed risus pretium quam.</p>
+        <div class="row">
+            <h3>Background</h3>
+            <input type="color" id="bg" value="#FFFFFF">
+        </div>
+        <div class="row">
+            <h3>Text!</h3>
+            <input type="color" id="txt">
+        </div>
+        <button id="clear">CLEAR</button>
+    </div>
+</div>
+
+
+
+<script>
+    const content = document.querySelector('.content');
+    const bg = document.getElementById('bg');
+    const txt = document.getElementById('txt');
+    const clear = document.getElementById('clear');
+
+bg.addEventListener('change' , function(e){
+    content.style.backgroundColor = e.target.value;
+});
+
+    txt.addEventListener('change' , function(e){
+        content.style.color=e.target.value;
+    });
+
+clear.addEventListener('click' , function(e){
+    content.style.backgroundColor = 'white';
+    bg.value ='#FFFFFF'
+    content.style.color ='black';
+    txt.value = '#000000'
+});
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

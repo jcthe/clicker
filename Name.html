@@ -3,20 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="container">
     <div class="content">
-        <h3> Name</h3>
-    </div>
+
+        <h1> Enter your name</h1>
+
+            <fieldset>
+                <legend>Name:</legend>
+                <div class="row">
+                    <div>
+                        <label for="firstname">First Name</label>
+                        <input id="firstname" name="firstname" type="text">
+                    </div>
+                    <div>
+                        <label for="lastname">Last Name</label>
+                        <input id="lastname" name="lastname" type="text">
+                    </div>
+                </div>
+                <button onclick="sayHello()">Say Hello </button>
+            </div>
 </div>
+            </fieldset>
+                <script>
+
+
+                    function sayHello() {
+
+                        const firstNameInput = document.querySelector("#firstName");
+
+                        const lastNameInput = document.querySelector("#lastName");
+
+                        const helloMessages = document.querySelector("#helloMessages");
 
 
 
+                        const firstName = firstNameInput.value;
+
+                        const lastName = lastNameInput.value;
 
 
 
+                        if (firstName && lastName) {
 
-</body>
+                            const fullName = firstName + " " + lastName;
+
+                            const helloMessage = document.createElement("p");
+
+                            helloMessage.textContent = "Hello, " + fullName + "!";
+
+                            helloMessages.prepend(helloMessage);
+
+
+
+                            firstNameInput.value = "";
+
+                            lastNameInput.value = "";
+
+                        }
+
+                    }
+
+                </script>
+            </body>
 </html>

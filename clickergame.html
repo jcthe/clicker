@@ -1,33 +1,68 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<HTML>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <title>Clicker Game</title>
 </head>
-<body>
-<div class="content">
-    <div class="container">
-        <img class="monster" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1fCwtm7K9K2f37gwPKIxZuVS0vrWwpAVFVQ&usqp=CAU">
-        <div class="row">
-            <button id="Click">Click</button><h3>Shop</h3>
 
-            <div class="row">
-            </div>
-        </div>
-    </div>
-</div>
-<div id="score">
-</div>
-<h1>Score</h1>
+<body>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXU0DfVSvsskbZi82tbZmAVWrTvV1NEo0E5g&usqp=CAU">
+
+
+<p>Score: <span id="score">0</span></p>
+<h1>SHOP</h1><button onclick="buyCursor()">2x clicks [<span id="cursorcost">15</span>] -- <span id="cursor">0</span></button>
+<button onclick="buySJJ()">SJJ power up [<span id="SJJcost">100</span>] -- <span id="SJJ">0</span></button>
+
+<button id="Click">Click</button>
+
+
 
 <script>
+
+    const button = document.getElementById('Click');
     const content = document.querySelector('.content');
     const points = document.getElementById('score');
-    const image = document.getElementById('image');
-    const button = document.getElementById('Click');
-    let score=0;
+
+
+
+    var  score= 0;
+    var clickingPower =2;
+
+
+    var  cursorCost =15;
+    var cursors = 0;
+
+    var SJJCost = 100;
+    var SJJ = 0;
+
+
+    function  buyCursor(){
+        if (score >= cursorCost) {
+            score = score - cursorCost;
+            cursors = cursors +1;
+            cursorCost = Math.round(cursorCost * 1.15);
+
+
+            document.getElementById("score").innerHTML = score;
+            document.getElementById("cursorCost").innerHTML = cursorCost;
+            document.getElementById("cursors").innerHTML = cursors;
+        }
+    }
+
+
+
+    function  buySJJ(){
+        if (score >= SJJCost) {
+            score = score - SJJCost;
+            SJJ = SJJ +1;
+            SJJCost = Math.round(SJJCost * 1.15);
+        }
+    }
+
+    function addToScore (amount) {
+        score = score + amount;
+        document.getElementById("score").innerHTML = score;
+    }
+
     button.addEventListener('click', function (){
         score=score+1;
         points.innerHTML=score
@@ -35,14 +70,11 @@
 
 
 
+    setInterval(function () {
+        score = score + cursors;
+        document.getElementById("score").innerHTML = score;
 
-
-
-
-
-
-
-
+    }, 1000); // 1000ms = 1 second
 </script>
 </body>
-</html>
+</HTML>
